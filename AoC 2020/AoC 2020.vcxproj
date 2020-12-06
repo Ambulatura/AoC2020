@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DC9E9377-C86B-EE82-F184-DC2ADDB02311}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AoC 2020</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Debug-x86_64\AoC 2020\</OutDir>
+    <IntDir>..\bin-intermediate\Debug-x86_64\AoC 2020\</IntDir>
+    <TargetName>AoC 2020</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Release-x86_64\AoC 2020\</OutDir>
+    <IntDir>..\bin-intermediate\Release-x86_64\AoC 2020\</IntDir>
+    <TargetName>AoC 2020</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "src\days\day01\day01_input.txt"\ (xcopy /Q /E /Y /I "src\days\day01\day01_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day01\day01_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day02\day02_input.txt"\ (xcopy /Q /E /Y /I "src\days\day02\day02_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day02\day02_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day03\day03_input.txt"\ (xcopy /Q /E /Y /I "src\days\day03\day03_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day03\day03_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day04\day04_input.txt"\ (xcopy /Q /E /Y /I "src\days\day04\day04_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day04\day04_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "src\days\day01\day01_input.txt"\ (xcopy /Q /E /Y /I "src\days\day01\day01_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day01\day01_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day02\day02_input.txt"\ (xcopy /Q /E /Y /I "src\days\day02\day02_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day02\day02_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day03\day03_input.txt"\ (xcopy /Q /E /Y /I "src\days\day03\day03_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day03\day03_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day04\day04_input.txt"\ (xcopy /Q /E /Y /I "src\days\day04\day04_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day04\day04_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\days\day01\day0101.h" />
+    <ClInclude Include="src\days\day01\day0102.h" />
+    <ClInclude Include="src\days\day02\day0201.h" />
+    <ClInclude Include="src\days\day02\day0202.h" />
+    <ClInclude Include="src\days\day03\day0301.h" />
+    <ClInclude Include="src\days\day03\day0302.h" />
+    <ClInclude Include="src\days\day04\day0401.h" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\days\day01\day01_input.txt" />
+    <None Include="src\days\day02\day02_input.txt" />
+    <None Include="src\days\day03\day03_input.txt" />
+    <None Include="src\days\day04\day04_input.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="days">
+      <UniqueIdentifier>{1692957C-02C9-960D-ABB5-7C1097CB120F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="days\day01">
+      <UniqueIdentifier>{648C67A1-5044-A9EE-B94B-824AA52244DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="days\day02">
+      <UniqueIdentifier>{658C67A1-5144-A9EE-BA4B-824AA62244DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="days\day03">
+      <UniqueIdentifier>{668C67A1-5244-A9EE-BB4B-824AA72244DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="days\day04">
+      <UniqueIdentifier>{678C67A1-5344-A9EE-BC4B-824AA82244DF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\days\day01\day0101.h">
+      <Filter>days\day01</Filter>
+    </ClInclude>
+    <ClInclude Include="src\days\day01\day0102.h">
+      <Filter>days\day01</Filter>
+    </ClInclude>
+    <ClInclude Include="src\days\day02\day0201.h">
+      <Filter>days\day02</Filter>
+    </ClInclude>
+    <ClInclude Include="src\days\day02\day0202.h">
+      <Filter>days\day02</Filter>
+    </ClInclude>
+    <ClInclude Include="src\days\day03\day0301.h">
+      <Filter>days\day03</Filter>
+    </ClInclude>
+    <ClInclude Include="src\days\day03\day0302.h">
+      <Filter>days\day03</Filter>
+    </ClInclude>
+    <ClInclude Include="src\days\day04\day0401.h">
+      <Filter>days\day04</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\days\day01\day01_input.txt">
+      <Filter>days\day01</Filter>
+    </None>
+    <None Include="src\days\day02\day02_input.txt">
+      <Filter>days\day02</Filter>
+    </None>
+    <None Include="src\days\day03\day03_input.txt">
+      <Filter>days\day03</Filter>
+    </None>
+    <None Include="src\days\day04\day04_input.txt">
+      <Filter>days\day04</Filter>
+    </None>
+  </ItemGroup>
+</Project>
