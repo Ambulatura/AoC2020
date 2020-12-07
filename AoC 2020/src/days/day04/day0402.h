@@ -1,7 +1,6 @@
 #pragma once
 
 #include "utils.h"
-#include <regex>
 
 class Day0402
 {
@@ -21,7 +20,7 @@ private:
 		};
 
 		uint32_t valid_passports_count = 0;
-		
+
 		for (const std::string_view passport : passports) {
 			if (passport.empty()) continue;
 			std::unordered_map<std::uint8_t, std::string> saved_fields;
@@ -33,7 +32,7 @@ private:
 				if (field_code != fields.end()) {
 					binary_form |= field_code->second;
 					saved_fields[field_code->second] = field_value;
-				}		
+				}
 			}
 			if (IsValid(binary_form)) {
 				bool is_value_valid = true;
@@ -100,7 +99,7 @@ private:
 				else
 					return false;
 			}
-			else 
+			else
 				return false;
 			break;
 		}
@@ -139,7 +138,7 @@ private:
     {
 		std::ifstream file(file_path);
 		std::vector<std::string> input;
-		
+
 		if (!file.is_open()) {
 			std::cout << "Failed to open file!" << std::endl;
 		}
