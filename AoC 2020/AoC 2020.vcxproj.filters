@@ -16,6 +16,9 @@
     <Filter Include="days\day04">
       <UniqueIdentifier>{678C67A1-5344-A9EE-BC4B-824AA82244DF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="days\day05">
+      <UniqueIdentifier>{688C67A1-5444-A9EE-BD4B-824AA92244DF}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\days\day01\day0101.h">
@@ -42,6 +45,12 @@
     <ClInclude Include="src\days\day04\day0402.h">
       <Filter>days\day04</Filter>
     </ClInclude>
+    <ClInclude Include="src\days\day05\day0501.h">
+      <Filter>days\day05</Filter>
+    </ClInclude>
+    <ClInclude Include="src\days\days.h">
+      <Filter>days</Filter>
+    </ClInclude>
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\utils.h" />
   </ItemGroup>
@@ -61,6 +70,9 @@
     </None>
     <None Include="src\days\day04\day04_input.txt">
       <Filter>days\day04</Filter>
+    </None>
+    <None Include="src\days\day05\day05_input.txt">
+      <Filter>days\day05</Filter>
     </None>
   </ItemGroup>
 </Project>

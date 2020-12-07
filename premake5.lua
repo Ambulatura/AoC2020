@@ -55,6 +55,7 @@ project "AoC 2020"
 		    "{COPY} \"src/days/day02/day02_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
 		    "{COPY} \"src/days/day03/day03_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
 		    "{COPY} \"src/days/day04/day04_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
+    		    "{COPY} \"src/days/day05/day05_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
 		}
 
 	filter "configurations:Debug"

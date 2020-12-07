@@ -1,12 +1,5 @@
 #include "pch.h"
-#include "days/day01/day0101.h"
-#include "days/day01/day0102.h"
-#include "days/day02/day0201.h"
-#include "days/day02/day0202.h"
-#include "days/day03/day0301.h"
-#include "days/day03/day0302.h"
-#include "days/day04/day0401.h"
-#include "days/day04/day0402.h"
+#include "days/days.h"
 
 int main()
 {
@@ -17,6 +10,7 @@ int main()
 	// Day0301::Run();
 	// Day0302::Run();
 	// Day0401::Run();
-	Day0402::Run();
+	// Day0402::Run();
+	Day0501::Run();
 	return 0;
 }
