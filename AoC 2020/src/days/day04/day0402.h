@@ -134,7 +134,7 @@ private:
 		}
 	}
 
-    static const std::vector<std::string> Read(const std::string file_path)
+    static const std::vector<std::string> Read(const std::string& file_path)
     {
 		std::ifstream file(file_path);
 		std::vector<std::string> input;
