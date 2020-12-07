@@ -39,6 +39,9 @@
     <ClInclude Include="src\days\day04\day0401.h">
       <Filter>days\day04</Filter>
     </ClInclude>
+    <ClInclude Include="src\days\day04\day0402.h">
+      <Filter>days\day04</Filter>
+    </ClInclude>
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\utils.h" />
   </ItemGroup>

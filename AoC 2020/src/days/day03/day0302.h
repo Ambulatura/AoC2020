@@ -9,8 +9,6 @@ public:
 	}
 
 private:
-	Day0302() {}
-
 	static const uint64_t FindTrees()
 	{
 		const auto& tree_map = Read("day03_input.txt");

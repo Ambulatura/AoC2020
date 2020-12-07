@@ -11,21 +11,19 @@ public:
 	}
 
 private:
-	Day0401() {}
-
 	static const uint32_t ValidPassports()
 	{
-		const auto& passports = Read("day04_input.txt");
-		
+		const auto& passports = Read("day04_input.txt");		
 		const std::unordered_map<std::string_view, uint8_t> fields = {
 			{"byr", 1 << 0}, {"iyr", 1 << 1}, {"eyr", 1 << 2}, {"hgt", 1 << 3},
 			{"hcl", 1 << 4}, {"ecl", 1 << 5}, {"pid", 1 << 6}, {"cid", 1 << 7},
 		};
-		uint8_t binary_form = 0;
+		
 		uint32_t valid_passports_count = 0;
 		
 		for (const std::string_view passport : passports) {
 			if (passport.empty()) continue;
+			uint8_t binary_form = 0;
 			for (const std::string_view field : split_string(passport, " ")) {
 				const auto& field_code = fields.find(field.substr(0, 3));
 				if (field_code != fields.end())
@@ -34,7 +32,6 @@ private:
 			if (IsValid(binary_form)) {
 				valid_passports_count++;
 			}
-			binary_form = 0;
 		}
 		return valid_passports_count;
 	}

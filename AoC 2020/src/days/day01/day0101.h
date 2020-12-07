@@ -9,8 +9,6 @@ public:
 	}
 
 private:
-	Day0101() {}
-
 	static const uint32_t Sum2020Product()
 	{
 		const auto& numbers = Read("day01_input.txt");

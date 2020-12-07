@@ -9,8 +9,6 @@ public:
 	}
 
 private:
-	Day0201() {}
-
 	static const uint32_t ValidPasswords()
 	{
 		uint32_t valid_passwords_count = 0;

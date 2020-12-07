@@ -6,6 +6,7 @@
 #include "days/day03/day0301.h"
 #include "days/day03/day0302.h"
 #include "days/day04/day0401.h"
+#include "days/day04/day0402.h"
 
 int main()
 {
@@ -16,5 +17,6 @@ int main()
 	// Day0301::Run();
 	// Day0302::Run();
 	Day0401::Run();
+	Day0402::Run();
 	return 0;
 }
