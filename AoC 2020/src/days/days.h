@@ -9,3 +9,4 @@
 #include "days/day04/day0401.h"
 #include "days/day04/day0402.h"
 #include "days/day05/day0501.h"
+#include "days/day05/day0502.h"
