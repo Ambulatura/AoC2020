@@ -11,3 +11,4 @@
 #include "days/day05/day0501.h"
 #include "days/day05/day0502.h"
 #include "days/day06/day0601.h"
+#include "days/day06/day0602.h"

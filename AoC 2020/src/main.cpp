@@ -14,5 +14,6 @@ int main()
 	// Day0501::Run();
 	// Day0502::Run();
 	Day0601::Run();
+	Day0602::Run();
 	return 0;
 }

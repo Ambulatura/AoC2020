@@ -2,12 +2,12 @@
 
 #include "utils.h"
 
-class Day0601
+class Day0602
 {
 public:
     static void Run()
     {
-		std::cout << "Day 6, answer 1: " << YesQuestions() << std::endl;
+		std::cout << "Day 6, answer 2: " << YesQuestions() << std::endl;
 	}
 
 private:
@@ -16,13 +16,17 @@ private:
 		uint32_t sum_of_yes_questions = 0;
 		const auto& groups = Read("day06_input.txt");
 		for (const std::string_view group : groups) {
-			std::string answered_questions;
+			uint32_t people_in_group = 0;
+			std::unordered_map<uint8_t, uint32_t> answered_questions;
 			for (const std::string_view yes_questions : split_string(group, "\n")) {
-				for (const std::uint8_t yes_question : yes_questions) {
-					if (std::find(answered_questions.begin(), answered_questions.end(), yes_question) == answered_questions.end()) {
-						answered_questions += yes_question;
-						sum_of_yes_questions++;
-					}
+				if (!yes_questions.empty())
+					people_in_group++;
+				for (const std::uint8_t yes_question : yes_questions)
+					answered_questions[yes_question] += 1;
+			}
+			for (const auto& answered_question : answered_questions) {
+				if (answered_question.second == people_in_group) {
+					sum_of_yes_questions++;
 				}
 			}
 		}
