@@ -19,8 +19,8 @@ private:
 			uint32_t people_in_group = 0;
 			std::unordered_map<uint8_t, uint32_t> answered_questions;
 			for (const std::string_view yes_questions : split_string(group, "\n")) {
-				if (!yes_questions.empty())
-					people_in_group++;
+				if (yes_questions.empty()) continue;
+				people_in_group++;
 				for (const std::uint8_t yes_question : yes_questions)
 					answered_questions[yes_question] += 1;
 			}
