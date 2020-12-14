@@ -37,7 +37,7 @@ private:
 							  std::unordered_map<std::string, std::vector<std::tuple<uint8_t, std::string>>>& bags_graph,
 							  std::unordered_map<std::string_view, std::vector<std::string_view>>& flattened_graph)
 	{
-		for (const auto& [number, contained] : bags_graph[contain]) {
+		for (const auto& [_, contained] : bags_graph[contain]) {
 			if (std::find(flattened_graph[root_bag].begin(),
 						  flattened_graph[root_bag].end(),
 						  contained) != flattened_graph[root_bag].end()) { continue; }
