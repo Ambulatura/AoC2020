@@ -37,7 +37,7 @@ project "AoC 2020"
 	{
 	}
 
-	links 
+	links
 	{
 	}
 
@@ -45,7 +45,7 @@ project "AoC 2020"
 		cppdialect "C++17"
 		systemversion "latest"
 
-	    	buildoptions 
+	    	buildoptions
 		{
 		}
 
@@ -56,7 +56,8 @@ project "AoC 2020"
 		    "{COPY} \"src/days/day03/day03_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
 		    "{COPY} \"src/days/day04/day04_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
     		    "{COPY} \"src/days/day05/day05_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
-    		    "{COPY} \"src/days/day06/day06_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",		    
+    		    "{COPY} \"src/days/day06/day06_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
+		    "{COPY} \"src/days/day07/day07_input.txt\" ../bin/" .. outputdir .. "\"/%{prj.name}\"",
 		}
 
 	filter "configurations:Debug"
@@ -64,4 +65,3 @@ project "AoC 2020"
 
 	filter "configurations:Release"
 		optimize "On"
-

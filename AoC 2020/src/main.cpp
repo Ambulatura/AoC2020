@@ -13,7 +13,8 @@ int main()
 	// Day0402::Run();
 	// Day0501::Run();
 	// Day0502::Run();
-	Day0601::Run();
-	Day0602::Run();
+	// Day0601::Run();
+	// Day0602::Run();
+	Day0701::Run();
 	return 0;
 }
