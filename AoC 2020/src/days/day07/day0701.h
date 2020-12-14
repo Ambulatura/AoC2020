@@ -29,7 +29,6 @@ private:
 				}
 			}
 		}
-		
 		return shiny_gold_bags;
 	}
 
@@ -71,10 +70,8 @@ private:
 				else {
 					bags_graph[contain].push_back(std::make_tuple(contained[0], contained.substr(1)));
 				}
-
 			}
 		}
-		
 		return bags_graph;
 	}
 
