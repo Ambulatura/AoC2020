@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <regex>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -9,4 +10,3 @@
 #include <array>
 #include <tuple>
 #include <unordered_map>
-#include <regex>

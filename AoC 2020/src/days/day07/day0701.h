@@ -22,8 +22,8 @@ private:
 			flatten_graph(bags.first, bags.first, bags_graph, flattened_graph);
 		}
 		
-		for (const auto& bags : flattened_graph) {
-			for (const auto& contained : bags.second) {
+		for (const auto& [contain, containeds] : flattened_graph) {
+			for (const auto& contained : containeds) {
 				if (contained == "shinygold") {
 					shiny_gold_bags++;
 				}
@@ -69,7 +69,8 @@ private:
 				
 				if (contained[0] == 'n') {
 					bags_graph[contain].push_back(std::make_tuple(0, ""));
-				} else {
+				}
+				else {
 					bags_graph[contain].push_back(std::make_tuple(contained[0], contained.substr(1)));
 				}
 
