@@ -18,11 +18,11 @@ private:
 		std::unordered_map<std::string_view, std::vector<std::string_view>> flattened_graph;
 		uint32_t shiny_gold_bags = 0;
 		
-		for (const auto& bags : bags_graph) {
-			flatten_graph(bags.first, bags.first, bags_graph, flattened_graph);
+		for (const auto& [contain, _containeds] : bags_graph) {
+			flatten_graph(contain, contain, bags_graph, flattened_graph);
 		}
 		
-		for (const auto& [contain, containeds] : flattened_graph) {
+		for (const auto& [_contain, containeds] : flattened_graph) {
 			for (const auto& contained : containeds) {
 				if (contained == "shinygold") {
 					shiny_gold_bags++;
@@ -37,7 +37,7 @@ private:
 							  std::unordered_map<std::string, std::vector<std::tuple<uint8_t, std::string>>>& bags_graph,
 							  std::unordered_map<std::string_view, std::vector<std::string_view>>& flattened_graph)
 	{
-		for (const auto& [_, contained] : bags_graph[contain]) {
+		for (const auto& [_number, contained] : bags_graph[contain]) {
 			if (std::find(flattened_graph[root_bag].begin(),
 						  flattened_graph[root_bag].end(),
 						  contained) != flattened_graph[root_bag].end()) { continue; }
@@ -54,12 +54,10 @@ private:
 			auto& words = split_string(rule, "contain");
 			std::string& contain = words[0];
 			std::string& containeds = words[1];
-
 			replace_substring(contain, "bags", "");
 			remove_character(contain, ' ');
 
 			auto& containeds_splitted = split_string(containeds, ", ");
-
 			for (uint32_t i = 0; i < containeds_splitted.size(); i++) {
 				std::string& contained = containeds_splitted[i];
 				replace_substring(contained, "bags?", "");
@@ -84,7 +82,6 @@ private:
     {
 		std::ifstream file(file_path);
 		std::vector<std::string> input;
-		
 
 		if (!file.is_open()) {
 			std::cout << "Failed to open file!" << std::endl;
