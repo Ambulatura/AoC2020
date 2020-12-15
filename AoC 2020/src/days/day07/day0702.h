@@ -2,54 +2,34 @@
 
 #include "utils.h"
 
-class Day0701
+class Day0702
 {
 public:
     static void Run()
     {
-		std::cout << "Day 7, answer 1: " << ShinyGoldBags() << std::endl;
+		std::cout << "Day 7, answer 2: " << BagsInsideShinyGoldBag() << std::endl;
 	}
 
 private:
-    static const uint32_t ShinyGoldBags()
+    static const uint32_t BagsInsideShinyGoldBag()
     {
 		const auto& input = Read("day07_input.txt");
-		std::unordered_map<std::string, std::vector<std::tuple<uint8_t, std::string>>> bags_graph = ParseRules(input);
-		std::unordered_map<std::string_view, std::vector<std::string_view>> flattened_graph;
+		std::unordered_map<std::string, std::vector<std::tuple<uint8_t, std::string>>>& bags_graph = ParseRules(input);
 
-		for (const auto& [contain, _containeds] : bags_graph) {
-			FlattenGraph(contain, contain, bags_graph, flattened_graph);
-		}
+		const uint32_t bags_inside_shiny_gold_bag = CountBags("shinygold", bags_graph);
 
-		uint32_t shiny_gold_bags = FindBagInOtherBags("shinygold", flattened_graph);
-
-		return shiny_gold_bags;
+		return bags_inside_shiny_gold_bag;
 	}
 
-	static uint32_t FindBagInOtherBags(const std::string_view searched_bag, const std::unordered_map<std::string_view, std::vector<std::string_view>>& flattened_graph)
+	static uint32_t CountBags(const std::string& contain,
+							  std::unordered_map<std::string, std::vector<std::tuple<uint8_t, std::string>>>& bags_graph)
 	{
 		uint32_t counter = 0;
-		for (const auto& [_contain, containeds] : flattened_graph) {
-			for (const auto& contained : containeds) {
-				if (contained == searched_bag) {
-					counter++;
-				}
-			}
+		for (const auto& [number, contained] : bags_graph[contain]) {
+			counter += number - '0';
+			counter += (number - '0') * CountBags(contained, bags_graph);
 		}
 		return counter;
-	}
-
-	static void FlattenGraph(const std::string& contain, const std::string& root_bag,
-							 std::unordered_map<std::string, std::vector<std::tuple<uint8_t, std::string>>>& bags_graph,
-							 std::unordered_map<std::string_view, std::vector<std::string_view>>& flattened_graph)
-	{
-		for (const auto& [_number, contained] : bags_graph[contain]) {
-			if (std::find(flattened_graph[root_bag].begin(),
-						  flattened_graph[root_bag].end(),
-						  contained) != flattened_graph[root_bag].end()) { continue; }
-			flattened_graph[root_bag].push_back(contained);
-			FlattenGraph(contained, root_bag, bags_graph, flattened_graph);
-		}
 	}
 
 	static std::unordered_map<std::string, std::vector<std::tuple<uint8_t, std::string>>> ParseRules(const std::vector<std::string>& input)
