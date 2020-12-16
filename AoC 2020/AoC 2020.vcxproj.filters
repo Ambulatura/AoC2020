@@ -25,6 +25,9 @@
     <Filter Include="days\day07">
       <UniqueIdentifier>{6A8C67A1-5644-A9EE-BF4B-824AAB2244DF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="days\day08">
+      <UniqueIdentifier>{6B8C67A1-5744-A9EE-C04B-824AAC2244DF}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\days\day01\day0101.h">
@@ -69,6 +72,9 @@
     <ClInclude Include="src\days\day07\day0702.h">
       <Filter>days\day07</Filter>
     </ClInclude>
+    <ClInclude Include="src\days\day08\day0801.h">
+      <Filter>days\day08</Filter>
+    </ClInclude>
     <ClInclude Include="src\days\days.h">
       <Filter>days</Filter>
     </ClInclude>
@@ -100,6 +106,9 @@
     </None>
     <None Include="src\days\day07\day07_input.txt">
       <Filter>days\day07</Filter>
+    </None>
+    <None Include="src\days\day08\day08_input.txt">
+      <Filter>days\day08</Filter>
     </None>
   </ItemGroup>
 </Project>
