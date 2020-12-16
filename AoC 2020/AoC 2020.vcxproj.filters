@@ -75,6 +75,9 @@
     <ClInclude Include="src\days\day08\day0801.h">
       <Filter>days\day08</Filter>
     </ClInclude>
+    <ClInclude Include="src\days\day08\day0802.h">
+      <Filter>days\day08</Filter>
+    </ClInclude>
     <ClInclude Include="src\days\days.h">
       <Filter>days</Filter>
     </ClInclude>

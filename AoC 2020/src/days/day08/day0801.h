@@ -5,11 +5,11 @@ class Day0801
 public:
     static void Run()
     {
-		std::cout << "Day 8, answer 1: " << CalculateAccumulatorValue() << std::endl;
+		std::cout << "Day 8, answer 1: " << AccumulatorValue() << std::endl;
 	}
 
 private:
-	static const uint32_t CalculateAccumulatorValue()
+	static const uint32_t AccumulatorValue()
 	{
 		auto& boot_codes = Read("day08_input.txt");
 		std::vector<uint32_t> processed_codes;
@@ -20,7 +20,7 @@ private:
 			const auto& [operation_code, value] = boot_codes[index];
 
 			if (std::find(processed_codes.begin(), processed_codes.end(), index) != processed_codes.end()) {
-				return accumulator;
+			    break;
 			}
 			processed_codes.push_back(index);
 
@@ -42,7 +42,7 @@ private:
 				break;
 			}
 		}
-		return 0;
+		return accumulator;
 	}
 
 	static std::unordered_map<uint32_t, std::tuple<uint8_t, int32_t>> Read(const std::string& file_path)
@@ -67,7 +67,4 @@ private:
 		}
 		return input;
 	}
-
-
-
 };

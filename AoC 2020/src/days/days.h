@@ -15,3 +15,4 @@
 #include "days/day07/day0701.h"
 #include "days/day07/day0702.h"
 #include "days/day08/day0801.h"
+#include "days/day08/day0802.h"

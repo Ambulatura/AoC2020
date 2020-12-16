@@ -124,6 +124,7 @@ IF EXIST "src\days\day08\day08_input.txt"\ (xcopy /Q /E /Y /I "src\days\day08\da
     <ClInclude Include="src\days\day07\day0701.h" />
     <ClInclude Include="src\days\day07\day0702.h" />
     <ClInclude Include="src\days\day08\day0801.h" />
+    <ClInclude Include="src\days\day08\day0802.h" />
     <ClInclude Include="src\days\days.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\utils.h" />
