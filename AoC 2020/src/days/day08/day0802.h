@@ -59,7 +59,7 @@ private:
 			default:
 				if (!terminated) {
 					const auto code_that_should_change  = changed_codes[changed_codes.size() - 1];
-					auto& [o_code, val] = boot_codes[code_that_should_change];
+					auto& [o_code, _val] = boot_codes[code_that_should_change];
 					if (o_code == 1 << 0)
 						o_code = 1 << 1;
 					else
@@ -68,6 +68,8 @@ private:
 					index = 0;
 					accumulator = 0;
 					processed_codes.clear();
+					changed_codes.clear();
+					is_code_changed = true;
 					terminated = true;
 				}
 				else
