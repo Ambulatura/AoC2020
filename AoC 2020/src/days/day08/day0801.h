@@ -5,7 +5,7 @@ class Day0801
 public:
     static void Run()
     {
-		std::cout << "Day 8, answer 1: " << AccumulatorValue() << std::endl;
+		std::cout << "Day 08, answer 1: " << AccumulatorValue() << std::endl;
 	}
 
 private:

@@ -7,7 +7,7 @@ class Day0601
 public:
     static void Run()
     {
-		std::cout << "Day 6, answer 1: " << YesQuestions() << std::endl;
+		std::cout << "Day 06, answer 1: " << YesQuestions() << std::endl;
 	}
 
 private:

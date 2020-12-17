@@ -5,7 +5,7 @@ class Day0101
 public:
 	static void Run()
 	{
-		std::cout << "Day 1, answer 1: " << Sum2020Product() << std::endl;
+		std::cout << "Day 01, answer 1: " << Sum2020Product() << std::endl;
 	}
 
 private:

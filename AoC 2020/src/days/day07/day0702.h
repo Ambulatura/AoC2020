@@ -7,7 +7,7 @@ class Day0702
 public:
     static void Run()
     {
-		std::cout << "Day 7, answer 2: " << BagsInsideShinyGoldBag() << std::endl;
+		std::cout << "Day 07, answer 2: " << BagsInsideShinyGoldBag() << std::endl;
 	}
 
 private:
