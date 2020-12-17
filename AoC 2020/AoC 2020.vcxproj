@@ -76,7 +76,8 @@ IF EXIST "src\days\day04\day04_input.txt"\ (xcopy /Q /E /Y /I "src\days\day04\da
 IF EXIST "src\days\day05\day05_input.txt"\ (xcopy /Q /E /Y /I "src\days\day05\day05_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day05\day05_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)
 IF EXIST "src\days\day06\day06_input.txt"\ (xcopy /Q /E /Y /I "src\days\day06\day06_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day06\day06_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)
 IF EXIST "src\days\day07\day07_input.txt"\ (xcopy /Q /E /Y /I "src\days\day07\day07_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day07\day07_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)
-IF EXIST "src\days\day08\day08_input.txt"\ (xcopy /Q /E /Y /I "src\days\day08\day08_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day08\day08_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)</Command>
+IF EXIST "src\days\day08\day08_input.txt"\ (xcopy /Q /E /Y /I "src\days\day08\day08_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day08\day08_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day09\day09_input.txt"\ (xcopy /Q /E /Y /I "src\days\day09\day09_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day09\day09_input.txt" ..\bin\Debug-x86_64"\$(ProjectName)" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -105,7 +106,8 @@ IF EXIST "src\days\day04\day04_input.txt"\ (xcopy /Q /E /Y /I "src\days\day04\da
 IF EXIST "src\days\day05\day05_input.txt"\ (xcopy /Q /E /Y /I "src\days\day05\day05_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day05\day05_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)
 IF EXIST "src\days\day06\day06_input.txt"\ (xcopy /Q /E /Y /I "src\days\day06\day06_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day06\day06_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)
 IF EXIST "src\days\day07\day07_input.txt"\ (xcopy /Q /E /Y /I "src\days\day07\day07_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day07\day07_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)
-IF EXIST "src\days\day08\day08_input.txt"\ (xcopy /Q /E /Y /I "src\days\day08\day08_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day08\day08_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)</Command>
+IF EXIST "src\days\day08\day08_input.txt"\ (xcopy /Q /E /Y /I "src\days\day08\day08_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day08\day08_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)
+IF EXIST "src\days\day09\day09_input.txt"\ (xcopy /Q /E /Y /I "src\days\day09\day09_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul) ELSE (xcopy /Q /Y /I "src\days\day09\day09_input.txt" ..\bin\Release-x86_64"\$(ProjectName)" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -125,6 +127,8 @@ IF EXIST "src\days\day08\day08_input.txt"\ (xcopy /Q /E /Y /I "src\days\day08\da
     <ClInclude Include="src\days\day07\day0702.h" />
     <ClInclude Include="src\days\day08\day0801.h" />
     <ClInclude Include="src\days\day08\day0802.h" />
+    <ClInclude Include="src\days\day09\day0901.h" />
+    <ClInclude Include="src\days\day09\day0902.h" />
     <ClInclude Include="src\days\days.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\utils.h" />
@@ -144,6 +148,7 @@ IF EXIST "src\days\day08\day08_input.txt"\ (xcopy /Q /E /Y /I "src\days\day08\da
     <None Include="src\days\day06\day06_input.txt" />
     <None Include="src\days\day07\day07_input.txt" />
     <None Include="src\days\day08\day08_input.txt" />
+    <None Include="src\days\day09\day09_input.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
